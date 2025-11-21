@@ -9,8 +9,7 @@ router.post('/', cardController.createCard);
 router.put('/:id', cardController.updateCard);
 router.delete('/:id', cardController.deleteCard);
 router.put('/:id/move', cardController.moveCard);
-router.get('/:id/recommendations', cardController.getRecommendations);
 router.post('/:id/comments', cardController.addComment);
-router.get('/:id/recommendations', authMiddleware, cardController.getCardRecommendations);
+router.get('/:id/recommendations', cardController.getCardRecommendations);
 
 module.exports = router;
